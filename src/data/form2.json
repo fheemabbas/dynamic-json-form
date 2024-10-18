@@ -1,0 +1,202 @@
+{
+  "form": {
+    "title": "Feedback Form",
+    "description": "We appreciate your feedback. Please fill out the details below.",
+    "groups": [
+      {
+        "title": "Personal Information",
+        "fields": [
+          {
+            "label": "Full Name",
+            "type": "text",
+            "name": "fullName",
+            "placeholder": "Enter your full name",
+            "required": true
+          },
+          {
+            "label": "Contact Number",
+            "type": "text",
+            "name": "contactNumber",
+            "placeholder": "Enter your phone number",
+            "required": true
+          }
+        ]
+      },
+      {
+        "title": "Feedback Details",
+        "fields": [
+          {
+            "label": "Experience Rating",
+            "type": "dropdown",
+            "name": "experienceRating",
+            "options": [
+              "Very Poor",
+              "Poor",
+              "Average",
+              "Good",
+              "Excellent"
+            ],
+            "required": true
+          },
+          {
+            "label": "Comments",
+            "type": "textarea",
+            "name": "comments",
+            "placeholder": "Enter your comments or suggestions",
+            "required": false
+          },
+          {
+            "label": "Would you recommend us?",
+            "type": "radio",
+            "name": "recommend",
+            "options": [
+              {
+                "label": "Yes",
+                "value": "yes"
+              },
+              {
+                "label": "No",
+                "value": "no"
+              }
+            ],
+            "required": true
+          }
+        ]
+      },
+      {
+        "title": "Service Evaluation",
+        "fields": [
+          {
+            "label": "Service Speed",
+            "type": "dropdown",
+            "name": "serviceSpeed",
+            "options": [
+              "Very Slow",
+              "Slow",
+              "Average",
+              "Fast",
+              "Very Fast"
+            ],
+            "required": true
+          },
+          {
+            "label": "Quality of Service",
+            "type": "dropdown",
+            "name": "serviceQuality",
+            "options": [
+              "Very Poor",
+              "Poor",
+              "Average",
+              "Good",
+              "Excellent"
+            ],
+            "required": true
+          }
+        ]
+      },
+      {
+        "title": "Product Feedback",
+        "fields": [
+          {
+            "label": "Product Used",
+            "type": "text",
+            "name": "productUsed",
+            "placeholder": "Enter the product name",
+            "required": true
+          },
+          {
+            "label": "Would you purchase again?",
+            "type": "radio",
+            "name": "purchaseAgain",
+            "options": [
+              {
+                "label": "Yes",
+                "value": "yes"
+              },
+              {
+                "label": "No",
+                "value": "no"
+              }
+            ],
+            "required": true
+          }
+        ]
+      },
+      {
+        "title": "Suggestions",
+        "fields": [
+          {
+            "label": "Improvements Needed",
+            "type": "textarea",
+            "name": "improvements",
+            "placeholder": "What improvements would you suggest?",
+            "required": false
+          }
+        ]
+      },
+      {
+        "title": "Additional Information",
+        "fields": [
+          {
+            "label": "Preferred Contact Method",
+            "type": "radio",
+            "name": "contactMethod",
+            "options": [
+              {
+                "label": "Phone",
+                "value": "phone"
+              },
+              {
+                "label": "Text Message",
+                "value": "sms"
+              },
+              {
+                "label": "Email",
+                "value": "email"
+              }
+            ],
+            "required": true
+          },
+          {
+            "label": "Subscribe to Newsletter",
+            "type": "checkbox",
+            "name": "newsletter",
+            "options": [
+              {
+                "label": "Yes, I want to subscribe",
+                "value": "subscribe"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Demographic Information",
+        "fields": [
+          {
+            "label": "Age Group",
+            "type": "dropdown",
+            "name": "ageGroup",
+            "options": [
+              "Under 18",
+              "18-24",
+              "25-34",
+              "35-44",
+              "45-54",
+              "55-64",
+              "65 and above"
+            ],
+            "required": false
+          },
+          {
+            "label": "Location",
+            "type": "text",
+            "name": "location",
+            "placeholder": "Enter your city or region",
+            "required": false
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -51,6 +51,7 @@ const FormCreation = () => {
   );
   const checkValidation = () => {
     const validateformdata = formData?.form[0][selectedForm]?.value;
+    console.log('validateformdata', validateformdata);
     const fieldsFormData = dynamicFormGroup[selectedFormIndex];
     const tempError = [];
     fieldsFormData.fields.forEach((element) => {
@@ -66,7 +67,7 @@ const FormCreation = () => {
       }
       if (
         element.min &&
-        element.max &&
+        element.max && validateformdata != undefined &&
         !(
           validateformdata[element.name] >= element.min &&
           validateformdata[element.name] <= element.max
