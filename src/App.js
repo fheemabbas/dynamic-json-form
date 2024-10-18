@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Container, CssBaseline, Box } from "@mui/material";
+import Header from "./components/Header";
+import Navbar from "./components/Navbar";
+import { useSelector } from "react-redux";
+import FormCreation from "./components/FormCreation";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{ display: "flex" }}>
+      <CssBaseline />
+      {/* Navbar always on left side */}
+      <Navbar />
+
+      {/* Main content */}
+      <Box component="main" sx={{ flexGrow: 1, padding: 3 }}>
+        <Header />
+        <Container>
+          <FormCreation />
+        </Container>
+      </Box>
     </div>
   );
-}
+};
 
 export default App;
