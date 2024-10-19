@@ -1,0 +1,235 @@
+{
+  "form": {
+    "title": "User Profile Form",
+    "description": "Please provide your details for our records.",
+    "groups": [
+      {
+        "title": "Contact Information",
+        "fields": [
+          {
+            "label": "Full Name",
+            "type": "text",
+            "name": "fullName",
+            "placeholder": "John Doe",
+            "required": true
+          },
+          {
+            "label": "Email",
+            "type": "email",
+            "name": "email",
+            "placeholder": "john.doe@example.com",
+            "required": true
+          },
+          {
+            "label": "Address",
+            "type": "textarea",
+            "name": "address",
+            "placeholder": "123 Main St, Apt 4B",
+            "required": true
+          },
+          {
+            "label": "State",
+            "type": "dropdown",
+            "name": "state",
+            "options": [
+              "Florida",
+              "Georgia",
+              "Illinois",
+              "New Jersey",
+              "Ohio",
+              "Pennsylvania"
+            ],
+            "required": true
+          },
+          {
+            "label": "Phone Number",
+            "type": "text",
+            "name": "phoneNumber",
+            "placeholder": "(123) 456-7890",
+            "required": true
+          },
+          {
+            "label": "Date of Birth",
+            "type": "date",
+            "name": "dob",
+            "required": true
+          },
+          {
+            "label": "Preferred Contact Method",
+            "type": "radio",
+            "name": "contactMethod",
+            "options": [
+              {
+                "label": "Email",
+                "value": "email"
+              },
+              {
+                "label": "Phone",
+                "value": "phone"
+              },
+              {
+                "label": "Mail",
+                "value": "mail"
+              }
+            ],
+            "required": true
+          }
+        ]
+      },
+      {
+        "title": "Education Background",
+        "fields": [
+          {
+            "label": "Highest Qualification",
+            "type": "dropdown",
+            "name": "qualification",
+            "options": [
+              "High School Diploma",
+              "Associate Degree",
+              "Bachelor's Degree",
+              "Master's Degree",
+              "Professional Certification"
+            ],
+            "required": true
+          },
+          {
+            "label": "Graduation Year",
+            "type": "number",
+            "name": "graduationYear",
+            "placeholder": "Enter year",
+            "min": 1950,
+            "max": 2025,
+            "required": true
+          },
+          {
+            "label": "Major Subjects",
+            "type": "checkbox",
+            "name": "subjects",
+            "options": [
+              {
+                "label": "Literature",
+                "value": "literature"
+              },
+              {
+                "label": "History",
+                "value": "history"
+              },
+              {
+                "label": "Mathematics",
+                "value": "math"
+              },
+              {
+                "label": "Art",
+                "value": "art"
+              },
+              {
+                "label": "Computer Science",
+                "value": "cs"
+              }
+            ]
+          },
+          {
+            "label": "Grade Point Average (GPA)",
+            "type": "slider",
+            "name": "gpa",
+            "min": 0.0,
+            "max": 4.0,
+            "step": 0.1
+          }
+        ]
+      },
+      {
+        "title": "Job Information",
+        "fields": [
+          {
+            "label": "Current Job Title",
+            "type": "text",
+            "name": "jobTitle",
+            "placeholder": "Software Developer",
+            "required": false
+          },
+          {
+            "label": "Employment Status",
+            "type": "radio",
+            "name": "employmentStatus",
+            "options": [
+              {
+                "label": "Employed",
+                "value": "employed"
+              },
+              {
+                "label": "Self-Employed",
+                "value": "selfEmployed"
+              },
+              {
+                "label": "Unemployed",
+                "value": "unemployed"
+              },
+              {
+                "label": "Student",
+                "value": "student"
+              }
+            ]
+          },
+          {
+            "label": "Professional Skills",
+            "type": "checkbox",
+            "name": "skills",
+            "options": [
+              {
+                "label": "Data Analysis",
+                "value": "dataAnalysis"
+              },
+              {
+                "label": "Web Development",
+                "value": "webDevelopment"
+              },
+              {
+                "label": "Graphic Design",
+                "value": "graphicDesign"
+              },
+              {
+                "label": "Project Management",
+                "value": "projectManagement"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Personal Interests",
+        "fields": [
+          {
+            "label": "Favorite Hobby",
+            "type": "text",
+            "name": "favoriteHobby",
+            "placeholder": "Photography"
+          },
+          {
+            "label": "Interest in Technology",
+            "type": "slider",
+            "name": "techInterest",
+            "min": 1,
+            "max": 10,
+            "step": 1
+          },
+          {
+            "label": "Do you play any sports?",
+            "type": "radio",
+            "name": "sportsParticipation",
+            "options": [
+              {
+                "label": "Yes",
+                "value": "yes"
+              },
+              {
+                "label": "No",
+                "value": "no"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -65,6 +65,12 @@ const FormCreation = () => {
         tempError.push(`${element.label} is required`);
         isError = true;
       }
+      if (element.type === 'email' && validateformdata[element.name]) {
+        const isValidEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(validateformdata[element.name])
+        if (!isValidEmail) {
+          tempError.push(`Please enter valid ${element.label}`);
+        }
+      }
       if (
         element.min &&
         element.max && validateformdata != undefined &&
