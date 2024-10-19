@@ -1,5 +1,5 @@
 import { createStore } from "redux";
-import dynamicFormData from "../data/form1.json";
+import dynamicFormData from "../data/form.json";
 import {
   UPDATE_SELECTED_FORM,
   UPDATE_SELECTED_FORM_FIELDS,
