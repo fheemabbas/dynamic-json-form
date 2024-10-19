@@ -16,8 +16,8 @@ export default function RowRadioButtonsGroup({
   const [touched, setTouched] = React.useState(false); // Track if user has touched the field
 
   React.useEffect(() => {
-    setValue(defaultValue?.[data.name] || []);
-  }, [data.name]);
+    setValue(defaultValue?.[data.name] || '');
+  }, [data.name, defaultValue]);
   const handleChange = (event) => {
     setValue(event.target.value); // Update the selected value
     setError(false); // Clear any errors when user selects an option

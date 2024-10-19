@@ -3,32 +3,26 @@ import {
   AppBar,
   Toolbar,
   IconButton,
-  Avatar,
-  Typography,
-  Menu,
-  MenuItem,
 } from "@mui/material";
-import NotificationsIcon from "@mui/icons-material/Notifications";
 import MenuIcon from "@mui/icons-material/Menu";
 import { useDispatch } from "react-redux";
-import { useState } from "react";
-import dynamicFormData from "../data/form.json";
+// import { useState } from "react";
 
 const Header = () => {
   const dispatch = useDispatch();
-  const [anchorEl, setAnchorEl] = useState(null);
+  // const [anchorEl, setAnchorEl] = useState(null);
 
   const toggleDrawer = () => {
     dispatch({ type: "TOGGLE_DRAWER" });
   };
 
-  const handleMenuOpen = (event) => {
-    setAnchorEl(event.currentTarget);
-  };
+  // const handleMenuOpen = (event) => {
+  //   setAnchorEl(event.currentTarget);
+  // };
 
-  const handleMenuClose = () => {
-    setAnchorEl(null);
-  };
+  // const handleMenuClose = () => {
+  //   setAnchorEl(null);
+  // };
   return (
     <AppBar position="static" color="default">
       <Toolbar style={{ justifyContent: "space-between" }}>

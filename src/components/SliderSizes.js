@@ -14,8 +14,8 @@ export default function SliderSizes({ data, defaultValue, updateSave }) {
   };
 
   React.useEffect(() => {
-    setValue(defaultValue?.[data.name] || data.min);
-  }, [data.name]);
+    setValue(defaultValue?.[data.name] || data.min || '');
+  }, [data.name, defaultValue, data.min]);
   return (
     <Box sx={{ width: 300 }}>
       <Typography id="slider-label" gutterBottom>

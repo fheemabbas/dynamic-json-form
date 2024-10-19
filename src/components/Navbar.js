@@ -4,12 +4,11 @@ import {
   List,
   ListItem,
   ListItemText,
-  ListItemIcon,
   Divider,
   Box,
 } from "@mui/material";
-import InboxIcon from "@mui/icons-material/Inbox";
-import MailIcon from "@mui/icons-material/Mail";
+// import InboxIcon from "@mui/icons-material/Inbox";
+// import MailIcon from "@mui/icons-material/Mail";
 import { useSelector, useDispatch } from "react-redux";
 import {
   updateSelectedForm,
@@ -20,25 +19,24 @@ import {
 const Navbar = () => {
   const isDrawerOpen = useSelector((state) => state.isDrawerOpen);
   const { selectedForm } = useSelector((state) => state);
-  const state = useSelector((state) => state);
   const dynamicFormGroup = useSelector((state) => state.dynamicFormGroup);
   const dispatch = useDispatch();
 
-  const toggleDrawer = () => {
-    dispatch({ type: "TOGGLE_DRAWER" });
-  };
+  // const toggleDrawer = () => {
+  //   dispatch({ type: "TOGGLE_DRAWER" });
+  // };
 
   const closeDrawer = () => {
     dispatch({ type: "CLOSE_DRAWER" });
   };
 
-  const menuItems = [
-    { text: "Contact Information", icon: <InboxIcon /> },
-    { text: "Schooling Information", icon: <MailIcon /> },
-    { text: "Employment Details", icon: <InboxIcon /> },
-    { text: "Hobbies and Interests", icon: <MailIcon /> },
-    { text: "Preferred Contact", icon: <InboxIcon /> },
-  ];
+  // const menuItems = [
+  //   { text: "Contact Information", icon: <InboxIcon /> },
+  //   { text: "Schooling Information", icon: <MailIcon /> },
+  //   { text: "Employment Details", icon: <InboxIcon /> },
+  //   { text: "Hobbies and Interests", icon: <MailIcon /> },
+  //   { text: "Preferred Contact", icon: <InboxIcon /> },
+  // ];
   const drawerContent = (
     <div>
       <List>

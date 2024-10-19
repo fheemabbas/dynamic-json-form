@@ -1,7 +1,6 @@
 import * as React from "react";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
-import FormHelperText from "@mui/material/FormHelperText";
 
 export default function NumberTextField({ data, updateSave, defaultValue }) {
   const [value, setValue] = React.useState(defaultValue?.[data.name] || ""); // Track input value
@@ -9,8 +8,8 @@ export default function NumberTextField({ data, updateSave, defaultValue }) {
   const [touched, setTouched] = React.useState(false); // Track if user has touched the field
 
   React.useEffect(() => {
-    setValue(defaultValue?.[data.name] || []);
-  }, [data.name]);
+    setValue(defaultValue?.[data.name] || "");
+  }, [data.name, defaultValue]);
   // Handler to allow only numbers and validate the input
   const handleChange = (event) => {
     const inputValue = event.target.value;

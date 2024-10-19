@@ -1,19 +1,4 @@
 import React from "react";
-import {
-  AppBar,
-  Toolbar,
-  IconButton,
-  Avatar,
-  Typography,
-  Menu,
-  MenuItem,
-  TextField,
-} from "@mui/material";
-import NotificationsIcon from "@mui/icons-material/Notifications";
-import MenuIcon from "@mui/icons-material/Menu";
-import { useDispatch, useSelector } from "react-redux";
-import { useState } from "react";
-import dynamicFormData from "../data/form.json";
 import RowRadioButtonsGroup from "./RowRadioButtonsGroup";
 import SelectLabels from "./Dropdown";
 import FormTextField from "./TextField";
@@ -74,7 +59,6 @@ const DynamicFields = ({ type, field, updateSave, value }) => {
         defaultValue={value}
       />
     );
-    return <div>Number</div>;
   } else if (type === "checkbox") {
     return (
       <FormCheckBox data={field} updateSave={updateSave} defaultValue={value} />

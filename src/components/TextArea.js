@@ -34,8 +34,8 @@ export default function TextArea({ data, updateSave, defaultValue }) {
   const showError = touched && isRequired && !value;
 
   React.useEffect(() => {
-    setValue(defaultValue?.[data.name] || []);
-  }, [data.name]);
+    setValue(defaultValue?.[data.name] || "");
+  }, [data.name, defaultValue]);
   return (
     <div>
       <StyledTextarea

@@ -1,19 +1,9 @@
-import React, { useEffect } from "react";
+import React from "react";
 import {
-  AppBar,
-  Toolbar,
-  IconButton,
-  Avatar,
-  Typography,
-  Menu,
-  MenuItem,
   Button,
 } from "@mui/material";
-import NotificationsIcon from "@mui/icons-material/Notifications";
-import MenuIcon from "@mui/icons-material/Menu";
 import { useDispatch, useSelector } from "react-redux";
 import { useState } from "react";
-import dynamicFormData from "../data/form.json";
 import DynamicFields from "./DynamicFields";
 import {
   updateSelectedForm,
@@ -22,13 +12,14 @@ import {
 } from "../store/action";
 import "../App.css";
 import ErrorList from "./ErrorList";
+
 const FormCreation = () => {
   let isError = false;
   const dispatch = useDispatch();
   const getFormValue = JSON.parse(
     localStorage.getItem("dynamicFormCreatedValue")
   );
-  const [anchorEl, setAnchorEl] = useState(null);
+  // const [anchorEl, setAnchorEl] = useState(null);
   const { selectedFormfields, selectedFormIndex, dynamicFormGroup } =
     useSelector((state) => state);
   const { selectedForm } = useSelector((state) => state);
@@ -51,7 +42,6 @@ const FormCreation = () => {
   );
   const checkValidation = () => {
     const validateformdata = formData?.form[0][selectedForm]?.value;
-    console.log('validateformdata', validateformdata);
     const fieldsFormData = dynamicFormGroup[selectedFormIndex];
     const tempError = [];
     fieldsFormData.fields.forEach((element) => {
@@ -73,7 +63,7 @@ const FormCreation = () => {
       }
       if (
         element.min &&
-        element.max && validateformdata != undefined &&
+        element.max && validateformdata !== undefined &&
         !(
           validateformdata[element.name] >= element.min &&
           validateformdata[element.name] <= element.max

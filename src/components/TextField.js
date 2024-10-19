@@ -6,8 +6,8 @@ export default function FormTextField({ data, updateSave, defaultValue }) {
   const [value, setValue] = React.useState(defaultValue?.[data.name] || ""); // Track selected value
 
   React.useEffect(() => {
-    setValue(defaultValue?.[data.name] || []);
-  }, [data.name]);
+    setValue(defaultValue?.[data.name] || "");
+  }, [data.name, defaultValue]);
   return (
     <Box
       component="form"

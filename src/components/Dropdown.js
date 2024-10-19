@@ -4,7 +4,6 @@ import MenuItem from "@mui/material/MenuItem";
 import FormHelperText from "@mui/material/FormHelperText";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
-import { FormControlLabel } from "@mui/material";
 
 export default function SelectLabels({ data, updateSave, defaultValue }) {
   const [value, setValue] = React.useState(defaultValue?.[data.name] || ""); // Track selected value
@@ -12,7 +11,7 @@ export default function SelectLabels({ data, updateSave, defaultValue }) {
 
   React.useEffect(() => {
     setValue(defaultValue?.[data.name] || []);
-  }, [data.name]);
+  }, [data.name, defaultValue]);
   const handleChange = (event) => {
     setValue(event.target.value); // Update value on selection
     updateSave(data.name, event.target.value);

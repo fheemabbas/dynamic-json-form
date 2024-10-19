@@ -2,7 +2,6 @@ import React from "react";
 import { Container, CssBaseline, Box } from "@mui/material";
 import Header from "./components/Header";
 import Navbar from "./components/Navbar";
-import { useSelector } from "react-redux";
 import FormCreation from "./components/FormCreation";
 
 const App = () => {

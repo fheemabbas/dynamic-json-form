@@ -26,7 +26,7 @@ export default function FormCheckBox({ data, updateSave, defaultValue }) {
   };
   React.useEffect(() => {
     setCheckedValues(defaultValue?.[data.name] || []);
-  }, [data.name]);
+  }, [data.name, defaultValue]);
   const handleBlur = () => {
     setTouched(true); // Mark as touched when user leaves the field
     if (data.required && checkedValues.length === 0) {
